@@ -3,27 +3,11 @@
 const app = require('../../src/app');
 const AWS = require("aws-sdk-mock");
 
+const mockedFilms = require("../mockedFilms");
+
 const supertest = require('supertest');
 
 const request = supertest(app);
-
-const mockedFilms = [
-    {
-        id: 1,
-        title: "La guerra de las galaxias",
-        author: "George Lucas"
-    },
-    {
-        id: 2,
-        title: "El señor de los anillos",
-        author: "J. R. R. Tolkien"
-    },
-    {
-        id: 3,
-        title: "Harry Potter",
-        author: "J. K. Rowling"
-    }
-]
 
 test('Get films endpoint', async () => {
 
