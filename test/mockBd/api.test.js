@@ -29,7 +29,7 @@ test('Save films endpoint', async () => {
         callback(null, "Film saved");
     });
 
-    const response = await request.post('/api/films/')
+    const response = await request.post('/api/films')
         .expect('Content-Type', /json/)
         .expect(201);
 
